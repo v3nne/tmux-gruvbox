@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/z3z1ma/tmux-gruvbox/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/z3z1ma/tmux-gruvbox/main/assets/misc/transparent.png" height="30" width="0px"/>
-	gruvbox for <a href="https://github.com/tmux/tmux">Tmux</a>
+	Gruvbox for <a href="https://github.com/tmux/tmux">Tmux</a>
 	<img src="https://raw.githubusercontent.com/z3z1ma/tmux-gruvbox/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -35,10 +35,7 @@
 
 ## Themes
 
-- 🌻 [Latte](./gruvbox-latte.tmuxtheme)
-- 🪴 [Frappé](./gruvbox-frappe.tmuxtheme)
-- 🌺 [Macchiato](./gruvbox-macchiato.tmuxtheme)
-- 🌿 [Mocha](./gruvbox-mocha.tmuxtheme)
+- 🌻 [Dark](./gruvbox-dark.tmuxtheme) - created by myself
 
 ## Installation
 
@@ -172,7 +169,7 @@ Use this to overide the way the current directory is displayed.
 ```sh
 set -g @gruvbox_window_format_directory_text "#{b:pane_current_path}"
 ```
-Use this to overide the way the directory is displayed.
+Use this to override the way the directory is displayed.
 
 ### Status
 
@@ -199,8 +196,8 @@ Values:
 set -g @gruvbox_status_connect_separator "yes"
 ```
 Values:
-- yes - the background color of the separator will not blend in with the brackground color of tmux
-- no - the background color of the separator will blend in with the brackground color of tmux
+- yes - the background color of the separator will not blend in with the background color of tmux
+- no - the background color of the separator will blend in with the background color of tmux
 
 
 #### Set the status module color fill:
@@ -262,12 +259,12 @@ set -g @gruvbox_date_time_icon "null"
 This module depends on [tmux-battery](https://github.com/tmux-plugins/tmux-battery/tree/master).
 
 #### Install
-The prefered way to install tmux-battery is using [TPM](https://github.com/tmux-plugins/tpm).
+The preferred way to install tmux-battery is using [TPM](https://github.com/tmux-plugins/tpm).
 
 #### Configure
 Load tmux-battery after you load gruvbox.
 ```sh
-set -g @plugin 'gruvbox/tmux'
+set -g @plugin 'z3z1ma/tmux-gruvbox'
 ...
 set -g @plugin 'tmux-plugins/tmux-battery'
 ```
