@@ -253,7 +253,7 @@ load_modules() {
 
 main() {
   local theme
-  theme="$(get_tmux_option "@gruvbox_flavour" "mocha")"
+  theme="$(get_tmux_option "@gruvbox_flavour" "dark")"
 
   # Aggregate all commands in one array
   local tmux_commands=()
