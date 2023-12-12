@@ -82,7 +82,7 @@ parse_result() {
   for line in "${=1}"; do
     array+=("$line")
   done
-  time="${array[2]}"
+  time="${array[3]}"
   end_time="${array[4]}"
   title="${array[*]:5:30}"
 }
