@@ -79,7 +79,8 @@ get_next_next_meeting() {
 
 parse_result() {
   array=()
-  for line in "${=1}"; do
+  normalized="${1// / /}" # replace non-breaking spaces with spaces
+  for line in "${=normalized}"; do
     array+=("$line")
   done
   time="${array[3]}"
