@@ -79,7 +79,7 @@ get_next_next_meeting() {
 
 parse_result() {
   array=()
-  for line in $1; do
+  for line in "${=1}"; do
     array+=("$line")
   done
   time="${array[2]}"
