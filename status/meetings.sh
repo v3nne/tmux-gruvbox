@@ -80,16 +80,16 @@ get_next_next_meeting() {
 parse_result() {
   array=()
   normalized="${1// / /}" # replace non-breaking spaces with spaces
-  for line in "${=normalized}"; do
+  for line in $normalized; do
     array+=("$line")
   done
-  time="${array[3]}"
-  end_time="${array[4]}"
-  title="${array[*]:5:30}"
+  time="${array[2]}"
+  end_time="${array[5]}"
+  title="${array[*]:7:30}"
 }
 
 calculate_times() {
-  epoc_meeting=$(date -j -f "%T" "$time:00" +%s)
+  epoc_meeting=$(date -j -f "%T" "${time// ?M}:00" +%s)
   epoc_now=$(date +%s)
   epoc_diff=$((epoc_meeting - epoc_now))
   minutes_till_meeting=$((epoc_diff / 60))
