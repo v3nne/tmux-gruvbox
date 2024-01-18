@@ -197,7 +197,7 @@ build_status_module() {
 load_modules() {
   local modules_list=$1
 
-  local modules_custom_path=$PLUGIN_DIR/custom
+  local modules_custom_path="$(get_tmux_option "@gruvbox_custom_plugin_dir" "${PLUGIN_DIR}/custom")"
   local modules_status_path=$PLUGIN_DIR/status
   local modules_window_path=$PLUGIN_DIR/window
 
