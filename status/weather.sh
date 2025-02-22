@@ -44,7 +44,7 @@ show_weather() {
   local index=$1
   local icon="$(get_tmux_option "@gruvbox_weather_icon" "󰖐")"
   local color="$(get_tmux_option "@gruvbox_weather_color" "$thm_blue")"
-  local text="#(${PLUGIN_DIR}/../scripts/get_weather.sh)"
+  local text="#(${PLUGIN_DIR}/../helpers/get_weather.sh)"
 
   local module=$( build_status_module "$index" "$icon" "$color" "$text" )
 
